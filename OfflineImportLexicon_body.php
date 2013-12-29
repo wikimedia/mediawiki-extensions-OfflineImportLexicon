@@ -23,7 +23,7 @@ class OfflineImportLexicon extends SpecialPage {
 	$this->outputHeader();
     $selfTitle = $this->getTitle();
 	$wgOut->setPagetitle( wfMsg('offlineimportlexicon') );
-    $actionUrl = $selfTitle->escapeLocalURL( );
+    $actionUrl = htmlspecialchars( $selfTitle->getLocalURL() );
 	$arrFormats = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16");
 
 	$wgOut->addHTML(wfMsg('initial_text'));
