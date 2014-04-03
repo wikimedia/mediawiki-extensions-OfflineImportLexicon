@@ -4,18 +4,18 @@
  *
  */
 
-$aliases = array();
+$specialPageAliases = array();
 
-$aliases['en'] = array(
+$specialPageAliases['en'] = array(
 	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
 );
 
 /** German (Deutsch) */
-$aliases['de'] = array(
+$specialPageAliases['de'] = array(
 	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
 );
 
 /** French (Français) */
-$aliases['fr'] = array(
+$specialPageAliases['fr'] = array(
 	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
 );
