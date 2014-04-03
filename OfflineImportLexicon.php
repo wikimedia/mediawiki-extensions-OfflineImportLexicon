@@ -23,7 +23,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['other'][] = array(
         'path' => __FILE__,
         'name' => 'OfflineImportLexicon',
-        'version' => '0.2.0.0',
+        'version' => '0.3.0.0',
         'url' => 'http://www.mediawiki.org/wiki/Extension:OfflineImportLexicon',
         'descriptionmsg' => 'description',
         'author' => array( 'Lia Veja' )
@@ -31,7 +31,7 @@ $wgExtensionCredits['other'][] = array(
 $dir = dirname(__FILE__) . '/';
 $wgSpecialPages['OfflineImportLexicon'] = 'OfflineImportLexicon';
 $wgExtensionMessagesFiles['OfflineImportLexicon'] = $dir .'languages/OfflineImportLexicon.i18n.php';
-$wgExtensionAliasesFiles['OfflineImportLexicon'] = $dir . 'OfflineImportLexicon.alias.php';
+$wgExtensionMessagesFiles['OfflineImportLexiconAlias'] = $dir . 'OfflineImportLexicon.alias.php';
 $wgAutoloadClasses['OfflineImportLexicon'] = $dir . 'OfflineImportLexicon_body.php';
 $wgSpecialPageGroups['OfflineImportLexicon'] = 'smw_group';
 
