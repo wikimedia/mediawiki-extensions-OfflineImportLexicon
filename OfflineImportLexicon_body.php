@@ -7,7 +7,6 @@ class OfflineImportLexicon extends SpecialPage {
    */
   public function __construct() {
     SpecialPage::SpecialPage("OfflineImportLexicon");
-    wfLoadExtensionMessages('OfflineImportLexicon');
   }
 
 
