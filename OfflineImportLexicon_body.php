@@ -354,5 +354,9 @@ class OfflineImportLexicon extends SpecialPage {
         imagecolordeallocate( $my_img, $background );
         imagedestroy( $my_img );
     }
+
+	protected function getGroupName() {
+		return 'smw_group';
+	}
 }
 
