@@ -41,7 +41,7 @@ $wgGroupPermissions['user']['offlineimportlexicon'] = true;
 // Hook things up
 $wgHooks['BeforePageDisplay'][] = 'ResourcesJSJ';
 $wgHooks['SkinAfterContent'][] = 'GetFormF';
-$wgHooks['ArticleSaveComplete'][] = 'CheckSave';
+$wgHooks['PageContentSaveComplete'][] = 'CheckSave';
 
 $wgResourceModules['ext.OfflineImportLexicon'] = array(
 		'scripts' => array('scripts/OIL_Constants.js', 'scripts/jquery.ezpz_tooltip.min.js', 'scripts/OfflineImportLexicon.js', 'scripts/OfflineImportLexiconSecond.js'),
@@ -57,16 +57,10 @@ $wgResourceModules['ext.OfflineImportLexicon'] = array(
  * @return true
  */
 function ResourcesJSJ( OutputPage $out ) {
-	global $IP, $wgScriptPath, $wgExtensionAssetsPath, $wgTitle;
+	global $wgTitle;
     if($wgTitle->getDBkey() == 'OfflineImportLexicon'){
         // Our custom CSS
-     //   $out->addExtensionStyle( $wgScriptPath.'/NonSvnExtensions/OfflineImportLexicon/OfflineImportLexicon.css' );
-        $out->includeJQuery();
-      //  $out->addScriptFile( $wgScriptPath . '/NonSvnExtensions/OfflineImportLexicon/jquery.ezpz_tooltip.min.js' );
-      //   $out->addScriptFile( $wgScriptPath . '/NonSvnExtensions/OfflineImportLexicon/OIL_Constants.js' );
-      //  $out->addScriptFile( $wgScriptPath . '/NonSvnExtensions/OfflineImportLexicon/OfflineImportLexicon.js' );
-      //  $out->addScriptFile( $wgScriptPath . '/NonSvnExtensions/OfflineImportLexicon/OfflineImportLexiconSecond.js' );
-        $out->addModules('ext.OfflineImportLexicon');
+        $out->addModules( array( 'ext.OfflineImportLexicon' ) );
     }
 	return true;
 }
