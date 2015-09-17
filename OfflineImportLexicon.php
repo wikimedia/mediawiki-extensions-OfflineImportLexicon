@@ -25,7 +25,7 @@ $wgExtensionCredits['other'][] = array(
         'name' => 'OfflineImportLexicon',
         'version' => '0.3.0.0',
         'url' => 'http://www.mediawiki.org/wiki/Extension:OfflineImportLexicon',
-        'descriptionmsg' => 'description',
+        'descriptionmsg' => 'offlineimportlexicon-desc',
         'author' => array( 'Lia Veja' )
 );
 $dir = dirname(__FILE__) . '/';
