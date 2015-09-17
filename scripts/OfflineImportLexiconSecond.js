@@ -65,8 +65,9 @@ function JsMwApi (api_url, request_type) {
             console.log([xhr, res]);
 
         callback(null);
-    }
+    };
 
+	/*jshint -W002 */
     /* Try to get a new XmlHttpRequest
      *
      * @return {XmlHttpRequest}
@@ -128,7 +129,7 @@ function JsMwApi (api_url, request_type) {
                 else
                     callback(res);
             }
-        }
+        };
     }
 
     /* Make a callback request to a remote api.php. Restricted as per api.php documentation.
@@ -150,7 +151,7 @@ function JsMwApi (api_url, request_type) {
                 on_error(null, callback, res);
             else
                 callback(res);
-        }
+        };
 
         var script = document.createElement('script');
         script.setAttribute('type', 'text/javascript');
@@ -213,9 +214,10 @@ function JsMwApi (api_url, request_type) {
     }
 
     // Make JSON.parse work
-    var JSON = (typeof JSON == 'undefined' ? new Object() : JSON);
+    var JSON = (typeof JSON == 'undefined' ? {} : JSON);
 
     if (typeof JSON.parse != 'function')
+		/*jshint -W061 */
         JSON.parse = function (json) { return eval('(' + json + ')'); };
 
     // Allow .prototype. extensions
@@ -307,7 +309,7 @@ JsMwApi.prototype.page = function (title) {
             edit_function(text, save_function, res);
 
         });
-    }
+    };
 
     /* A thin wrapper around the API's parse function. Set's the pst flag to
      * make subst: work, and returns all parse information
@@ -331,8 +333,8 @@ JsMwApi.prototype.page = function (title) {
                 callback(null, res);
             else
                 callback(res.parse.text['*'], res);
-        })
-    }
+        });
+    };
 
     /* A thin wrapper around .parse that forces the text to be parsed without
      * any <p> tags that might otherwise get added.
@@ -345,11 +347,11 @@ JsMwApi.prototype.page = function (title) {
         call_with_page.parse("<div>\n" + to_parse + "</div>", function (parsed, res)
         {
             callback(parsed ? parsed.replace(/^<div>\n?/,'').replace(/(\s*\n)?<\/div>\n*(<!--[^>]*-->\s*)?$/,'') : parsed, res);
-        })
-    }
+        });
+    };
 
     return call_with_page;
-}
+};
 /* API usage:
 function edit_function(text, save_function, edit_res)
 {

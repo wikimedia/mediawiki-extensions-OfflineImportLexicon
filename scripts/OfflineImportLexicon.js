@@ -9,14 +9,14 @@
 
 var hasVolumeVar=false;
 var page = "";
-var currentLexicon = new Array();
-var textObj=new Array();
-var selectedProp= new Array();
+var currentLexicon = [];
+var textObj= [];
+var selectedProp= [];
 var flag = false;
 var from = 0;
 var index = 0;
 var queryText ="";
-var selected = new Array();
+var selected = [];
 var $j=jQuery.noConflict();
 
 function initGlobals()
@@ -89,7 +89,7 @@ function post_save_function_images(save_res)
 // Retrieve lexicons when application starts
 jQuery(document).ready(function() {
     // init status bar
-    var status = "Click on New Lexicon ..."
+    var status = "Click on New Lexicon ...";
     _statusbar = new StatusBar(null,{showCloseButton: true,additive:true,afterTimeoutText: status });
     _statusbar.show(status);
     var query = wgServer+wgScript+jsonGeneralLink+jsonLink;
@@ -98,12 +98,12 @@ jQuery(document).ready(function() {
 
     jQuery("#selectLexicon").change(function (event) {
         jQuery("#lexiconList li").remove();
-        if(jQuery("#selectLexicon option:selected").val()!="" || jQuery("#selectLexicon option:selected").val()!=undefined)
+        if(jQuery("#selectLexicon option:selected").val()!=="" || jQuery("#selectLexicon option:selected").val()!==undefined)
         {
             jQuery("#selectVolume option").remove();
             var temp = trim(jQuery("#selectLexicon option:selected").attr('title'));
             var query = wgServer+wgScript+jsonGeneralLink;
-            if(temp!="")
+            if(temp!=="")
             {
                 query += jsonLinkVolume.replace('@@@',jQuery("#selectLexicon option:selected").val().replace(/-/g,'-2D').replace(/ /g,'-20'));
                 getJsonProperties('volume', query);
@@ -120,12 +120,12 @@ jQuery(document).ready(function() {
 
     jQuery("#selectVolume").change(function (event) {
         jQuery("#lexiconList li").remove();
-        if(jQuery("#selectVolume option:selected").val()!="" || jQuery("#selectVolume option:selected").val()!=undefined)
+        if(jQuery("#selectVolume option:selected").val()!=="" || jQuery("#selectVolume option:selected").val()!==undefined)
         {
           var temp = trim(jQuery("#selectVolume option:selected").text());
           var lexicon = trim(jQuery("#selectLexicon option:selected").text());
           var query = wgServer+wgScript+jsonGeneralLink;
-          if(temp!="")
+          if(temp!=="")
           {
             query += jsonLinkArticle.replace('@@@',temp.replace(/-/g,'-2D').replace(/ /g,'-20').replace(/\//g,'-2F'));
           }
@@ -349,32 +349,32 @@ function checkImagesTemplate()
         {
            // alert("aici+++");
             var temp = item.title;
-            if(temp!="" && temp!=undefined)
+            if(temp!=="" && temp!==undefined)
             {
                 res += "| Title = "+temp+"\n";
                 jQuery("#lemmataTitle").val(temp);
             }
             temp = item.subtitle;
-            if(temp!="" && temp!=undefined)
+            if(temp!=="" && temp!==undefined)
             {
                 res += "| Subtitle = "+temp+"\n";
                 jQuery("#lemmataSubtitle").val(temp);
             }
             temp = item.part_of_lexicon;
-            if(temp!="" && temp!=undefined)
+            if(temp!=="" && temp!==undefined)
             {
                 res += "| Part of Lexicon = "+temp+"\n";
             }
             temp = item.part_of_volume;
-            if(temp!="" && temp!=undefined)
+            if(temp!=="" && temp!==undefined)
                 res += "| Part of Volume = "+temp+"\n";
             res += "| Has Digitized = ";
             var obj = item.has_digitized;
             jQuery("#lemmataImages").text(obj);
             res += obj;
             res += "\n{{Authors \n| Author = ";
-            var obj = item.author;
-            jQuery("#lemmataAuthor").val(obj);
+            var object = item.author;
+            jQuery("#lemmataAuthor").val(object);
        //   res += page+'; \n';
             temp = item.first_page;
             if(temp!="" && temp!=undefined)
@@ -984,52 +984,55 @@ function waitForMe(){
 
   function hasVolume()
   {
-      var res = "";
-      var short = jQuery("input#metadataShortTitle").val();
-    //var hasvol = jQuery("input#metadataHasVolume").val();
-      var hasvol = jQuery("#selectoutput option:selected").text();
-    //  alert('hasvol '+hasvol);
-      if(hasvol.indexOf(";")!=-1)
+	var res = "";
+	var short = jQuery("input#metadataShortTitle").val();
+	// var hasvol = jQuery("input#metadataHasVolume").val();
+	var hasvol = jQuery("#selectoutput option:selected").text();
+    // alert('hasvol '+hasvol);
+	if(hasvol.indexOf(";")!=-1)
+	{
+ 		var arrCreators = hasvol.split(';');
+		var countItems = 0;
+		res += "| Has Volume = ";
+		for(var i in arrCreators)
+		{
+			countItems +=1;
+			res +=short+'/Volume '+zeroPad(arrCreators[i],2);
+			if(countItems<  arrCreators.length){
+				res += ";";
+			}
+		}
+ 		hasVolumeVar = true;
+	}
+      else
       {
-            var arrCreators = hasvol.split(';');
-			var countItems = 0;
+        // alert(jQuery("#selectoutput option:selected").text());
+        //  if(hasvol=="1" && jQuery("#selectoutput option:selected").text()=='1') res ='| Has Volume =' + short+'/Volume '+zeroPad(1,2);
+		if(hasvol=="1"){
+			res ='| Has Volume =';
+
+		}
+		else
+		{
 			res += "| Has Volume = ";
-			for(var i in arrCreators)
-            {
-				countItems +=1;
-				res +=short+'/Volume '+zeroPad(arrCreators[i],2);
-				if(countItems<  arrCreators.length){
+			hasVolumeVar = true;
+			var ii = parseInt(jQuery("#selectoutput option:selected").text());
+			alert("ii "+ii);
+			/*jshint -W038 */
+			for(i=1; i<=ii; i++)
+			{
+				/*jshint -W038 */
+				res +=short+'/Volume '+zeroPad(i,2);
+				/*jshint -W038 */
+				if(i <  ii)
+				{
 					res += ";";
 				}
 			}
-          hasVolumeVar = true;
-      }
-      else
-      {
-         // alert(jQuery("#selectoutput option:selected").text());
-        //  if(hasvol=="1" && jQuery("#selectoutput option:selected").text()=='1') res ='| Has Volume =' + short+'/Volume '+zeroPad(1,2);
-          if(hasvol=="1"){
-              res ='| Has Volume =';
-
-          }
-          else
-          {
-             res += "| Has Volume = ";
-             hasVolumeVar = true;
-             var ii = parseInt(jQuery("#selectoutput option:selected").text());
-             alert("ii "+ii);
-             for(i=1; i<=ii; i++)
-             {
-                res +=short+'/Volume '+zeroPad(i,2);
-                if(i <  ii)
-                {
-					res += ";";
-				}
-             }
-          }
-      }
-     alert(res);
-     return res;
+		}
+	}
+	alert(res);
+	return res;
   }
     function zeroPad(num, places)
     {
@@ -1052,6 +1055,7 @@ function waitForMe(){
 
  function initImagesData(data)
  {
+	/*jslint evil: true */
     var obj = eval(data);
     alert(obj[0].id);
     alert(fixedDecodeURI(obj[0].name));
@@ -1146,6 +1150,7 @@ function newLexicon() {
 
 function renderList(data) {
 	// JAX-RS serializes an empty list as null, and a 'collection of one' as an object (not an 'array of one')
+	/*jslint evil: true */
     var obj = eval(data);
     alert(obj[0].id);
     alert(obj[1].name);
@@ -1276,12 +1281,12 @@ function StatusBar(sel,options)
                 },
                 timeout);
         }
-    }
+    };
     this.release = function()
     {
         if(_statusbar)
             jQuery(_statusbar).remove();
-    }
+    };
 }
 // use this as a global instance to customize constructor
 // or do nothing and get a default status bar
@@ -1294,6 +1299,7 @@ function showStatus(message,timeout,additive,isError)
 }
 
 function romanize (num) {
+	/* jshint -W018 */
 	if (!+num)
 		return false;
 	var	digits = String(+num).split(""),
@@ -1308,6 +1314,7 @@ function romanize (num) {
 }
 
 function deromanize (str) {
+	/*jshint -W004 */
 	var	str = str.toUpperCase(),
 		validator = /^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/,
 		token = /[MDLV]|C[MD]?|X[CL]?|I[XV]?/g,
