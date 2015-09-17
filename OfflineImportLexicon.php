@@ -31,7 +31,6 @@ $wgExtensionCredits['other'][] = array(
 $dir = dirname(__FILE__) . '/';
 $wgSpecialPages['OfflineImportLexicon'] = 'OfflineImportLexicon';
 $wgMessagesDirs['OfflineImportLexicon'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['OfflineImportLexicon'] = $dir .'languages/OfflineImportLexicon.i18n.php';
 $wgExtensionMessagesFiles['OfflineImportLexiconAlias'] = $dir . 'OfflineImportLexicon.alias.php';
 $wgAutoloadClasses['OfflineImportLexicon'] = $dir . 'OfflineImportLexicon_body.php';
 
