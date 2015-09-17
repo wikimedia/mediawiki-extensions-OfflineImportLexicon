@@ -4,7 +4,7 @@
  * @copyright 2012 Lia Veja
  */
 /*
-    Copyright (c) 2012 Lia Veja
+	Copyright (c) 2012 Lia Veja
 
 	This work is licensed under the Creative Commons
 	Attribution-NonCommercial-ShareAlike 3.0
@@ -21,13 +21,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgExtensionCredits['other'][] = array(
-        'path' => __FILE__,
-        'name' => 'OfflineImportLexicon',
-        'version' => '0.3.0.0',
-        'url' => 'http://www.mediawiki.org/wiki/Extension:OfflineImportLexicon',
-        'descriptionmsg' => 'offlineimportlexicon-desc',
-        'author' => array( 'Lia Veja' )
+	'path' => __FILE__,
+	'name' => 'OfflineImportLexicon',
+	'version' => '0.3.0.0',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:OfflineImportLexicon',
+	'descriptionmsg' => 'offlineimportlexicon-desc',
+	'author' => array( 'Lia Veja' )
 );
+
 $dir = dirname(__FILE__) . '/';
 $wgSpecialPages['OfflineImportLexicon'] = 'OfflineImportLexicon';
 $wgMessagesDirs['OfflineImportLexicon'] = __DIR__ . '/i18n';
@@ -43,11 +44,18 @@ $wgHooks['SkinAfterContent'][] = 'GetFormF';
 $wgHooks['PageContentSaveComplete'][] = 'CheckSave';
 
 $wgResourceModules['ext.OfflineImportLexicon'] = array(
-		'scripts' => array('scripts/OIL_Constants.js', 'scripts/jquery.ezpz_tooltip.min.js', 'scripts/OfflineImportLexicon.js', 'scripts/OfflineImportLexiconSecond.js'),
-		'styles' => array('styles/OfflineImportLexicon.css'),
-		'localBasePath' => dirname( __FILE__ ),
-        'remoteExtPath' => 'OfflineImportLexicon'
-	);
+	'scripts' => array(
+		'scripts/OIL_Constants.js',
+		'scripts/jquery.ezpz_tooltip.min.js',
+		'scripts/OfflineImportLexicon.js',
+		'scripts/OfflineImportLexiconSecond.js'
+	),
+	'styles' => array(
+		'styles/OfflineImportLexicon.css'
+	),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'OfflineImportLexicon'
+);
 
 /**
  * Adds required JavaScript & CSS files to the HTML output of a page
@@ -57,44 +65,43 @@ $wgResourceModules['ext.OfflineImportLexicon'] = array(
  */
 function ResourcesJSJ( OutputPage $out ) {
 	global $wgTitle;
-    if($wgTitle->getDBkey() == 'OfflineImportLexicon'){
-        // Our custom CSS
-        $out->addModules( array( 'ext.OfflineImportLexicon' ) );
-    }
-	return true;
+
+	if ( $wgTitle->getDBkey() == 'OfflineImportLexicon' ) {
+		// Our custom CSS
+		$out->addModules( array( 'ext.OfflineImportLexicon' ) );
+	}
 }
+
 function GetFormF( &$data, $skin = null ) {
 	global  $wgOut, $wgUser, $wgExtensionAssetsPath;
 
-        if( is_null( $skin ) ) {
-                global $wgTitle;
-                $check = $wgTitle->getNamespace() == -1 && $wgTitle->getDBkey() == 'OfflineImportLexicon';
-            } else {
-                $check = $skin->getTitle()->isSpecial( 'OfflineImportLexicon' );
-            }
-        if( $check )
-        {
-        $titleObj = SpecialPage::getTitleFor( 'OfflineImportLexicon' );
- }
- return true;
+	if( is_null( $skin ) ) {
+		global $wgTitle;
+		$check = $wgTitle->getNamespace() == -1 && $wgTitle->getDBkey() == 'OfflineImportLexicon';
+	} else {
+		$check = $skin->getTitle()->isSpecial( 'OfflineImportLexicon' );
+	}
+	if( $check ) {
+		$titleObj = SpecialPage::getTitleFor( 'OfflineImportLexicon' );
+	}
+	return true;
 }
 
-
 /**
-	$article: the article (object) saved
-	$user: the user (object) who saved the article
-	$text: the new article text
-	$summary: the article summary (comment)
-	$isminor: minor flag
-	$iswatch: watch flag
-	$section: section #
-*/
+ * $article: the article (object) saved
+ * $user: the user (object) who saved the article
+ * $text: the new article text
+ * $summary: the article summary (comment)
+ * $isminor: minor flag
+ * $iswatch: watch flag
+ * $section: section #
+ */
 
 function CheckSave(  $article, $user) {
-    global $wgOut, $wgScriptPath;
+	global $wgOut, $wgScriptPath;
 
-    $articleId = $article->getID();
-    $articleTitle = $article -> getTitle();
+	$articleId = $article->getID();
+	$articleTitle = $article -> getTitle();
 	$userId = $user->getName();
 
 	$dbw = wfGetDB( DB_MASTER );
@@ -103,9 +110,7 @@ function CheckSave(  $article, $user) {
 		'<div id="lexicon-se" style="display:none;">'
 		. '<p id="lexicon-se-editors">' . $articleTitle . '</p>'
 		. '</div>'
-		);
+	);
 	//$wgOut->addScriptFile(  $wgScriptPath . '/NonSvnExtensions/OfflineImportLexicon/second.js'  );
 	return true;
 }
-
-
