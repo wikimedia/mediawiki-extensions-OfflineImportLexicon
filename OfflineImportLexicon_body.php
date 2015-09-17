@@ -6,9 +6,8 @@ class OfflineImportLexicon extends SpecialPage {
    * Constructor
    */
   public function __construct() {
-    SpecialPage::SpecialPage("OfflineImportLexicon");
+    parent::__construct( 'OfflineImportLexicon' );
   }
-
 
   /**
    * Execute
