@@ -255,7 +255,7 @@ jQuery('#addimagesbutton').click(function() {
 	return false;
 });
 
-jQuery('#lexiconList a').live('click', function() {
+jQuery('body').on('click', '#lexiconList a', function() {
 	findById(jQuery(this).data('identity'));
    });
 
