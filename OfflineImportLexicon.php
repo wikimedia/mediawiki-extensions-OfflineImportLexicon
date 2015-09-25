@@ -36,6 +36,7 @@ $wgExtensionMessagesFiles['OfflineImportLexiconAlias'] = $dir . 'OfflineImportLe
 $wgAutoloadClasses['OfflineImportLexicon'] = $dir . 'OfflineImportLexicon_body.php';
 $wgSpecialPageGroups['OfflineImportLexicon'] = 'smw_group';
 
+$wgAvailableRights[] = 'offlineimportlexicon';
 $wgGroupPermissions['user']['offlineimportlexicon'] = true;
 
 // Hook things up
