@@ -20,11 +20,11 @@ class OfflineImportLexicon extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader();
 		$selfTitle = $this->getPageTitle();
-		$wgOut->setPagetitle( wfMsg('offlineimportlexicon') );
+		$wgOut->setPagetitle( $this->msg('offlineimportlexicon') );
 		$actionUrl = htmlspecialchars( $selfTitle->getLocalURL() );
 		$arrFormats = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16");
 
-		$wgOut->addHTML( wfMsg('offlineimportlexicon-initial-text') );
+		$wgOut->addHTML( $this->msg('offlineimportlexicon-initial-text')->escaped() );
 
 		$metadataType = $wgRequest->getVal( 'metadataType');
 		$metadataTitle = $wgRequest->getVal( 'metadataTitle');
@@ -72,69 +72,69 @@ class OfflineImportLexicon extends SpecialPage {
 		} else {
 			$formfields =  "<div class = 'import-init' id='import-init'>
 			<div class = 'header' id='lexicon'>
-			<fieldset id='field0'><legend>".wfMsg('offlineimportlexicon-lexicon')."</legend>
-			<label>".wfMsg('offlineimportlexicon-lexicons').": </label>
+			<fieldset id='field0'><legend>".$this->msg('offlineimportlexicon-lexicon')->escaped()."</legend>
+			<label>".$this->msg('offlineimportlexicon-lexicons')->escaped().": </label>
 			<select  id='selectLexicon'  size='1' />";
 			$formfields .= "<option value=''>Select lexicon...</option>";
-			$formfields .= "</select><br/><br/><button id='addLexicon'>".wfMsg('offlineimportlexicon-new-lexicon')."</button> </fieldset></div>
+			$formfields .= "</select><br/><br/><button id='addLexicon'>".$this->msg('offlineimportlexicon-new-lexicon')->escaped()."</button> </fieldset></div>
 			<div class = 'header' id='volume'>
-			<fieldset id='field00'><legend>".wfMsg('offlineimportlexicon-volume')."</legend>
-			<label>".wfMsg('offlineimportlexicon-volumes').": </label>
+			<fieldset id='field00'><legend>".$this->msg('offlineimportlexicon-volume')->escaped()."</legend>
+			<label>".$this->msg('offlineimportlexicon-volumes')->escaped().": </label>
 			<select  id='selectVolume'  size='1' />";
-			$formfields .= "</select><br/><br/><button id='addVolume'>".wfMsg('offlineimportlexicon-new-volume')."</button> </fieldset></div>
-			<div  class='rightArea'><ul id='lexiconList'></ul><button id='addlemmatabutton'>".wfMsg('offlineimportlexicon-new-lemma')."</button><button id='addimagesbutton'>Add media metadata</button></div>
+			$formfields .= "</select><br/><br/><button id='addVolume'>".$this->msg('offlineimportlexicon-new-volume')->escaped()."</button> </fieldset></div>
+			<div  class='rightArea'><ul id='lexiconList'></ul><button id='addlemmatabutton'>".$this->msg('offlineimportlexicon-new-lemma')->escaped()."</button><button id='addimagesbutton'>Add media metadata</button></div>
 			</div>
 			<div class='import-new' id='import-new'>
 			<div id='lexicon_template'>
-			<fieldset id='field1'><legend>".wfMsg('offlineimportlexicon-new-lexicon')."</legend>
+			<fieldset id='field1'><legend>".$this->msg('offlineimportlexicon-new-lexicon')."</legend>
 			<form id='Lexicon' >
 			<div class = 'lexiconInForm' >
 			<table  id='lexicon_table' >
 			<tr>
-				<div class='tooltip-content' id='cora-content-1'>".wfMsg('offlineimportlexicon-content-1')."</div>
-				<td class='tooltip-target' id='cora-target-1'>".wfMsg('offlineimportlexicon-title')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataTitle' name = 'metadataTitle'  value='".$metadataTitle."'  maxlength='200' size='50' /> <td ><label class='error' for='metadataTitle' id='title_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-1'>".$this->msg('offlineimportlexicon-content-1')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-1'>".$this->msg('offlineimportlexicon-title')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataTitle' name = 'metadataTitle'  value='".$metadataTitle."'  maxlength='200' size='50' /> <td ><label class='error' for='metadataTitle' id='title_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-2'>".wfMsg('offlineimportlexicon-content-2')."</div>
-				<td class='tooltip-target' id='cora-target-2'>".wfMsg('offlineimportlexicon-short')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataShortTitle' name='metadataShortTitle' value='".$metadataShortTitle."' maxlength='200' size='50' /> <td ><label class='error' for='metadataShortTitle' id='shortTitle_error'>This field is required.</label> </td>
-				</td>
-			</tr>
-
-			<tr>
-				<div class='tooltip-content' id='cora-content-3'>".wfMsg('offlineimportlexicon-content-3')."</div>
-				<td class='tooltip-target' id='cora-target-3'>".wfMsg('offlineimportlexicon-subtitle').":&nbsp;</td><td><input tabindex='1' type='text' id='metadataSubtitle' name='metadataSubtitle' value='".$metadataSubtitle."' maxlength='200' size='50' />  <td >&nbsp;</td>
-				</td>
-			</tr>
-			<tr>
-				<div class='tooltip-content' id='cora-content-4'>".wfMsg('offlineimportlexicon-content-4')."</div>
-				<td class='tooltip-target' id='cora-target-4'>".wfMsg('offlineimportlexicon-place-of-publication')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataPlaceofPublication' name='metadataPlaceofPublication' value='".$metadataPlaceofPublication."' maxlength='200' size='50' /> <td ><label class='error' for='metadataPlaceofPublication' id='place_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-2'>".$this->msg('offlineimportlexicon-content-2')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-2'>".$this->msg('offlineimportlexicon-short')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataShortTitle' name='metadataShortTitle' value='".$metadataShortTitle."' maxlength='200' size='50' /> <td ><label class='error' for='metadataShortTitle' id='shortTitle_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 
 			<tr>
-				<div class='tooltip-content' id='cora-content-5'>".wfMsg('offlineimportlexicon-content-5')."</div>
-				<td class='tooltip-target' id='cora-target-5'>".wfMsg('offlineimportlexicon-year-of-publication')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataYearofPublication' name='metadataYearofPublication' value='".$metadataYearofPublication."' maxlength='200' size='50' /><td ><label class='error' for='metadataYearofPublication' id='year_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-3'>".$this->msg('offlineimportlexicon-content-3')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-3'>".$this->msg('offlineimportlexicon-subtitle')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='metadataSubtitle' name='metadataSubtitle' value='".$metadataSubtitle."' maxlength='200' size='50' />  <td >&nbsp;</td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-6'>".wfMsg('offlineimportlexicon-content-6')."</div>
-				<td class='tooltip-target' id='cora-target-6'>".wfMsg('offlineimportlexicon-editor')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataEditor' name='metadataEditor' value='".$metadataEditor."' maxlength='200' size='50' /><td ><label class='error' for='metadataEditor' id='editor_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-4'>".$this->msg('offlineimportlexicon-content-4')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-4'>".$this->msg('offlineimportlexicon-place-of-publication')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataPlaceofPublication' name='metadataPlaceofPublication' value='".$metadataPlaceofPublication."' maxlength='200' size='50' /> <td ><label class='error' for='metadataPlaceofPublication' id='place_error'>This field is required.</label> </td>
+				</td>
+			</tr>
+
+			<tr>
+				<div class='tooltip-content' id='cora-content-5'>".$this->msg('offlineimportlexicon-content-5')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-5'>".$this->msg('offlineimportlexicon-year-of-publication')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataYearofPublication' name='metadataYearofPublication' value='".$metadataYearofPublication."' maxlength='200' size='50' /><td ><label class='error' for='metadataYearofPublication' id='year_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-7'>".wfMsg('offlineimportlexicon-content-7')."</div>
-				<td class='tooltip-target' id='cora-target-7'>".wfMsg('offlineimportlexicon-publisher').":&nbsp;</td><td><input tabindex='1' type='text' id='metadataPublisher' name='metadataPublisher' value='".$metadataPublisher."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-6'>".$this->msg('offlineimportlexicon-content-6')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-6'>".$this->msg('offlineimportlexicon-editor')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='metadataEditor' name='metadataEditor' value='".$metadataEditor."' maxlength='200' size='50' /><td ><label class='error' for='metadataEditor' id='editor_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-8'>".wfMsg('offlineimportlexicon-content-8')."</div>
-				<td class='tooltip-target' id='cora-target-8'>".wfMsg('offlineimportlexicon-edition').":&nbsp;</td><td><input tabindex='1' type='text' id='metadataEdition' name='metadataEdition' value='".$metadataEdition."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-7'>".$this->msg('offlineimportlexicon-content-7')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-7'>".$this->msg('offlineimportlexicon-publisher')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='metadataPublisher' name='metadataPublisher' value='".$metadataPublisher."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-9'>".wfMsg('offlineimportlexicon-content-9')."</div>
-				<td class='tooltip-target' id='cora-target-9'>".wfMsg('offlineimportlexicon-language').":&nbsp;</td><td><input tabindex='1' type='text' id='metadataLanguage' name='metadataLanguage' value='".$metadataLanguage."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-8'>".$this->msg('offlineimportlexicon-content-8')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-8'>".$this->msg('offlineimportlexicon-edition')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='metadataEdition' name='metadataEdition' value='".$metadataEdition."' maxlength='200' size='50' />
+				</td>
+			</tr>
+			<tr>
+				<div class='tooltip-content' id='cora-content-9'>".$this->msg('offlineimportlexicon-content-9')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-9'>".$this->msg('offlineimportlexicon-language')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='metadataLanguage' name='metadataLanguage' value='".$metadataLanguage."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<!--<tr>
@@ -142,8 +142,8 @@ class OfflineImportLexicon extends SpecialPage {
 				</td>
 			</tr>-->
 			<tr>
-				<div class='tooltip-content' id='cora-content-10'>".wfMsg('offlineimportlexicon-content-10')."</div>
-				<td class='tooltip-target' id='cora-target-10'>".wfMsg('offlineimportlexicon-number-of-volumes').":&nbsp;</td>
+				<div class='tooltip-content' id='cora-content-10'>".$this->msg('offlineimportlexicon-content-10')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-10'>".$this->msg('offlineimportlexicon-number-of-volumes')->escaped().":&nbsp;</td>
 				<td ><select  id = 'selectoutput' name='selectoutput'  size='1' />";
 
 			foreach( $arrFormats as $format ) {
@@ -155,7 +155,7 @@ class OfflineImportLexicon extends SpecialPage {
 			</tr>
 			<input type='hidden' name='output' id='output' />
 			<tr>
-			<td colspan='3'><button id='lexiconbutton'>".wfMsg('offlineimportlexicon-create-lexicon')."</button><button id='lexiconcancel'>".wfMsg('cancel')."</button></td>
+			<td colspan='3'><button id='lexiconbutton'>".$this->msg('offlineimportlexicon-create-lexicon')->escaped()."</button><button id='lexiconcancel'>".$this->msg('cancel')->escaped()."</button></td>
 			</tr>
 			</table>
 			</div>
@@ -166,60 +166,60 @@ class OfflineImportLexicon extends SpecialPage {
 
 			";
 			$formfields .=  "<div id='volume_template' >
-			<fieldset id='field2'><legend>".wfMsg('offlineimportlexicon-volume')."</legend>
+			<fieldset id='field2'><legend>".$this->msg('offlineimportlexicon-volume')->escaped()."</legend>
 			<form id='Volume' >
 			<div class = 'volumeInForm' >
 			<table  id='volume_table' >
 			<tr>
-				<div class='tooltip-content' id='cora-content-21'>".wfMsg('offlineimportlexicon-content-21')."</div>
-				<td class='tooltip-target' id='cora-target-21'>".wfMsg('offlineimportlexicon-title')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumeTitle' name='volumeTitle' value='".$volumeTitle."' maxlength='200' size='50' /> <td ><label class='error' for='volumeTitle' id='title_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-21'>".$this->msg('offlineimportlexicon-content-21')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-21'>".$this->msg('offlineimportlexicon-title')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumeTitle' name='volumeTitle' value='".$volumeTitle."' maxlength='200' size='50' /> <td ><label class='error' for='volumeTitle' id='title_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 
 			<tr>
-				<div class='tooltip-content' id='cora-content-22'>".wfMsg('offlineimportlexicon-content-22')."</div>
-				<td class='tooltip-target' id='cora-target-22'>".wfMsg('offlineimportlexicon-subtitle').":&nbsp;</td><td><input tabindex='1' type='text' id='volumeSubtitle' name='volumeSubtitle' value='".$volumeSubtitle."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-22'>".$this->msg('offlineimportlexicon-content-22')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-22'>".$this->msg('offlineimportlexicon-subtitle')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='volumeSubtitle' name='volumeSubtitle' value='".$volumeSubtitle."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-23'>".wfMsg('offlineimportlexicon-content-23')."</div>
-				<td class='tooltip-target' id='cora-target-23'>".wfMsg('offlineimportlexicon-place-of-publication')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumePlaceofPublication' name='volumePlaceofPublication' value='".$volumePlaceofPublication."' maxlength='200' size='50' /><td ><label class='error' for='volumePlaceofPublication' id='vplace_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-23'>".$this->msg('offlineimportlexicon-content-23')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-23'>".$this->msg('offlineimportlexicon-place-of-publication')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumePlaceofPublication' name='volumePlaceofPublication' value='".$volumePlaceofPublication."' maxlength='200' size='50' /><td ><label class='error' for='volumePlaceofPublication' id='vplace_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-24'>".wfMsg('offlineimportlexicon-content-24')."</div>
-				<td class='tooltip-target' id='cora-target-24'>".wfMsg('offlineimportlexicon-year-of-publication')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumeYearofPublication' name='volumeYearofPublication' value='".$volumeYearofPublication."' maxlength='200' size='50' /> <td ><label class='error' for='volumeYearofPublication' id='vyear_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-24'>".$this->msg('offlineimportlexicon-content-24')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-24'>".$this->msg('offlineimportlexicon-year-of-publication')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='volumeYearofPublication' name='volumeYearofPublication' value='".$volumeYearofPublication."' maxlength='200' size='50' /> <td ><label class='error' for='volumeYearofPublication' id='vyear_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-25'>".wfMsg('offlineimportlexicon-content-25')."</div>
-				<td class='tooltip-target' id='cora-target-25'>".wfMsg('offlineimportlexicon-editor')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text'  id='volumeEditor' name='volumeEditor' value='".$volumeEditor."' maxlength='200' size='50' /> <td ><label class='error' for='volumeEditor' id='veditor_error'>This field is required.</label> </td>
+				<div class='tooltip-content' id='cora-content-25'>".$this->msg('offlineimportlexicon-content-25')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-25'>".$this->msg('offlineimportlexicon-editor')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text'  id='volumeEditor' name='volumeEditor' value='".$volumeEditor."' maxlength='200' size='50' /> <td ><label class='error' for='volumeEditor' id='veditor_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-26'>".wfMsg('offlineimportlexicon-content-26')."</div>
-				<td class='tooltip-target' id='cora-target-26'>".wfMsg('offlineimportlexicon-publisher').":&nbsp;</td><td><input tabindex='1' type='text' id='volumePublisher' name='volumePublisher' value='".$volumePublisher."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-26'>".$this->msg('offlineimportlexicon-content-26')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-26'>".$this->msg('offlineimportlexicon-publisher')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='volumePublisher' name='volumePublisher' value='".$volumePublisher."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-27'>".wfMsg('offlineimportlexicon-content-27')."</div>
-				<td class='tooltip-target' id='cora-target-27'>".wfMsg('offlineimportlexicon-language').":&nbsp;</td><td><input tabindex='1' type='text' id='volumeLanguage' name='volumeLanguage' value='".$volumeLanguage."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-27'>".$this->msg('offlineimportlexicon-content-27')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-27'>".$this->msg('offlineimportlexicon-language')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='volumeLanguage' name='volumeLanguage' value='".$volumeLanguage."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-28'>".wfMsg('offlineimportlexicon-content-28')."</div>
-				<td class='tooltip-target' id='cora-target-28'>".wfMsg('offlineimportlexicon-volume-number').":&nbsp;</td><td><input tabindex='1' type='text' id='volumeNumber' name='volumeNumber' value='".$volumeNumber."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-28'>".$this->msg('offlineimportlexicon-content-28')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-28'>".$this->msg('offlineimportlexicon-volume-number')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='volumeNumber' name='volumeNumber' value='".$volumeNumber."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-29'>".wfMsg('offlineimportlexicon-content-29')."</div>
-				<td class='tooltip-target' id='cora-target-29'>".wfMsg('offlineimportlexicon-physical-description').":&nbsp;</td><td><input tabindex='1' type='text' id='volumeDescription' name='volumeDescription' value='".$volumeDescription."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-29'>".$this->msg('offlineimportlexicon-content-29')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-29'>".$this->msg('offlineimportlexicon-physical-description')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='volumeDescription' name='volumeDescription' value='".$volumeDescription."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<input type='hidden' name='add' id='add' />
 			<tr>
 			<td>
-			<td colspan='3'><button id='volumebutton'>".wfMsg('offlineimportlexicon-create-volume')."</button><button id='volumecancel'>".wfMsg('offlineimportlexicon-cancel')."</button></td>
+			<td colspan='3'><button id='volumebutton'>".$this->msg('offlineimportlexicon-create-volume')->escaped()."</button><button id='volumecancel'>".$this->msg('offlineimportlexicon-cancel')->escaped()."</button></td>
 			</td>
 			</tr>
 			</table>
@@ -232,15 +232,15 @@ class OfflineImportLexicon extends SpecialPage {
 			";
 
 			$formfields .=  "<div id='lemmata_template' >
-			<fieldset id='field3'><legend>".wfMsg('offlineimportlexicon-lemmata')."</legend>
+			<fieldset id='field3'><legend>".$this->msg('offlineimportlexicon-lemmata')->escaped()."</legend>
 			<form id='Lemmata' >
 			<table  id='lemmata_table' >
-			<tr><div class='tooltip-content' id='cora-content-31'>".wfMsg('offlineimportlexicon-content-31')."</div>
-				<td class='tooltip-target' id='cora-target-31'>".wfMsg('offlineimportlexicon-title')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='lemmataTitle' name='lemmataTitle' value='".$lemmataTitle."' maxlength='200' size='50' /><td ><label class='error' for='lemmataTitle' id='ltitle_error'>This field is required.</label> </td>
+			<tr><div class='tooltip-content' id='cora-content-31'>".$this->msg('offlineimportlexicon-content-31')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-31'>".$this->msg('offlineimportlexicon-title')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='lemmataTitle' name='lemmataTitle' value='".$lemmataTitle."' maxlength='200' size='50' /><td ><label class='error' for='lemmataTitle' id='ltitle_error'>This field is required.</label> </td>
 				</td>
 			</tr>
-			<tr><div class='tooltip-content' id='cora-content-32'>".wfMsg('offlineimportlexicon-content-32')."</div>
-				<td class='tooltip-target' id='cora-target-32'>".wfMsg('offlineimportlexicon-type')."<em>*</em>:&nbsp;</td>
+			<tr><div class='tooltip-content' id='cora-content-32'>".$this->msg('offlineimportlexicon-content-32')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-32'>".$this->msg('offlineimportlexicon-type')->escaped()."<em>*</em>:&nbsp;</td>
 				<td><select  id='metadataType' name='metadataType'  size='1' />".
 					"<option id='Lemma' value='Lemma' selected='selected'>Lemma</option>".
 					"<option id='Article' value='Article'>Article</option>".
@@ -250,52 +250,52 @@ class OfflineImportLexicon extends SpecialPage {
 					"</select></td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-33'>".wfMsg('offlineimportlexicon-content-33')."</div>
-				<td class='tooltip-target' id='cora-target-33'>".wfMsg('offlineimportlexicon-subtitle').":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataSubtitle' name='lemmataSubtitle' value='".$lemmataSubtitle."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-33'>".$this->msg('offlineimportlexicon-content-33')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-33'>".$this->msg('offlineimportlexicon-subtitle')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataSubtitle' name='lemmataSubtitle' value='".$lemmataSubtitle."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-34'>".wfMsg('offlineimportlexicon-content-34')."</div>
-				<td class='tooltip-target' id='cora-target-34'>".wfMsg('offlineimportlexicon-author').":&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataAuthor' name='lemmataAuthor' value='".$lemmataAuthor."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-34'>".$this->msg('offlineimportlexicon-content-34')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-34'>".$this->msg('offlineimportlexicon-author')->escaped().":&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataAuthor' name='lemmataAuthor' value='".$lemmataAuthor."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-355'>".wfMsg('offlineimportlexicon-content-355')."</div>
-				<td class='tooltip-target' id='cora-target-355'>".wfMsg('offlineimportlexicon-language').":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLanguage' name='lemmataLanguage' value='".$lemmataLanguage."' maxlength='200' size='50' />
+				<div class='tooltip-content' id='cora-content-355'>".$this->msg('offlineimportlexicon-content-355')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-355'>".$this->msg('offlineimportlexicon-language')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLanguage' name='lemmataLanguage' value='".$lemmataLanguage."' maxlength='200' size='50' />
 				</td>
 			</tr>
 			<tr>
-			<div class='tooltip-content' id='cora-content-37'>".wfMsg('offlineimportlexicon-content-37')."</div>
-				<td class='tooltip-target' id='cora-target-37'>".wfMsg('offlineimportlexicon-first-page-g').":&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataFirstPageN' name='lemmataFirstPageN' value='".$lemmataFirstPageN."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataFirstPageN' id='lfirstN_error'>This field is required.</label> </td>
+			<div class='tooltip-content' id='cora-content-37'>".$this->msg('offlineimportlexicon-content-37')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-37'>".$this->msg('offlineimportlexicon-first-page-g')->escaped().":&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataFirstPageN' name='lemmataFirstPageN' value='".$lemmataFirstPageN."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataFirstPageN' id='lfirstN_error'>This field is required.</label> </td>
 				</td>
 			</tr>
-			<tr><div class='tooltip-content' id='cora-content-38'>".wfMsg('offlineimportlexicon-content-38')."</div>
-				<td class='tooltip-target' id='cora-target-38'>".wfMsg('offlineimportlexicon-last-page-g').":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLastPageN' name='lemmataLastPageN' value='".$lemmataLastPageN."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataLastPageN' id='llastN_error'>This field is required.</label> </td>
-				</td>
-			</tr>
-			<tr>
-			<div class='tooltip-content' id='cora-content-35'>".wfMsg('offlineimportlexicon-content-35')."</div>
-				<td class='tooltip-target' id='cora-target-35'>".wfMsg('offlineimportlexicon-first-page-n')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataFirstPage' name='lemmataFirstPage' value='".$lemmataFirstPage."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataFirstPage' id='lfirst_error'>This field is required.</label> </td>
+			<tr><div class='tooltip-content' id='cora-content-38'>".$this->msg('offlineimportlexicon-content-38')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-38'>".$this->msg('offlineimportlexicon-last-page-g')->escaped().":&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLastPageN' name='lemmataLastPageN' value='".$lemmataLastPageN."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataLastPageN' id='llastN_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-36'>".wfMsg('offlineimportlexicon-content-36')."</div>
-				<td class='tooltip-target' id='cora-target-36'>".wfMsg('offlineimportlexicon-last-page-n')."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLastPage' name='lemmataLastPage' value='".$lemmataLastPage."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataLastPage' id='llast_error'>This field is required.</label> </td>
+			<div class='tooltip-content' id='cora-content-35'>".$this->msg('offlineimportlexicon-content-35')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-35'>".$this->msg('offlineimportlexicon-first-page-n')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text'  id='lemmataFirstPage' name='lemmataFirstPage' value='".$lemmataFirstPage."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataFirstPage' id='lfirst_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-39'>".wfMsg('offlineimportlexicon-content-39')."</div>
-				<td class='tooltip-target' id='cora-target-39'>".wfMsg('offlineimportlexicon-alternate').":&nbsp;</td><td><textarea id='lemmataImages' name='lemmataImages' value='".$lemmataImages."' cols='105' rows='2'> </textarea>
+				<div class='tooltip-content' id='cora-content-36'>".$this->msg('offlineimportlexicon-content-36')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-36'>".$this->msg('offlineimportlexicon-last-page-n')->escaped()."<em>*</em>:&nbsp;</td><td><input tabindex='1' type='text' id='lemmataLastPage' name='lemmataLastPage' value='".$lemmataLastPage."' maxlength='200' size='50' /> <td ><label class='error' for='lemmataLastPage' id='llast_error'>This field is required.</label> </td>
 				</td>
 			</tr>
 			<tr>
-				<div class='tooltip-content' id='cora-content-40'>".wfMsg('offlineimportlexicon-content-40')."</div>
-				<td class='tooltip-target' id='cora-target-40'>".wfMsg('offlineimportlexicon-rights-holder').":&nbsp;</td><td><textarea id='lemmataRights' name='lemmataRights' value='".$lemmataRights."' cols='105' rows='2'> </textarea>
+				<div class='tooltip-content' id='cora-content-39'>".$this->msg('offlineimportlexicon-content-39')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-39'>".$this->msg('offlineimportlexicon-alternate')->escaped().":&nbsp;</td><td><textarea id='lemmataImages' name='lemmataImages' value='".$lemmataImages."' cols='105' rows='2'> </textarea>
+				</td>
+			</tr>
+			<tr>
+				<div class='tooltip-content' id='cora-content-40'>".$this->msg('offlineimportlexicon-content-40')->escaped()."</div>
+				<td class='tooltip-target' id='cora-target-40'>".$this->msg('offlineimportlexicon-rights-holder')->escaped().":&nbsp;</td><td><textarea id='lemmataRights' name='lemmataRights' value='".$lemmataRights."' cols='105' rows='2'> </textarea>
 				</td>
 			</tr>
 			<input type='hidden' name='addLemmata' id='addLemmata' />
 			<tr>
-			<td colspan='4'><button id='lemmatabutton'>".wfMsg('offlineimportlexicon-create-lemma')."</button><button id='newmediabutton'>".wfMsg('offlineimportlexicon-add-media')."</button><button id='lemmatacancel'>".wfMsg('cancel')."</button><button id='lemmatarefresh'>".wfMsg('refresh')."</button></td>
+			<td colspan='4'><button id='lemmatabutton'>".$this->msg('offlineimportlexicon-create-lemma')->escaped()."</button><button id='newmediabutton'>".$this->msg('offlineimportlexicon-add-media')->escaped()."</button><button id='lemmatacancel'>".$this->msg('cancel')->escaped()."</button><button id='lemmatarefresh'>".$this->msg('refresh')->escaped()."</button></td>
 			</tr>
 			</table>
 			</form>
