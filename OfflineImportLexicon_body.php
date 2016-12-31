@@ -326,7 +326,8 @@ class OfflineImportLexicon extends SpecialPage {
 
 		$article = new Article($titleObj);
 		$flags = $flags|EDIT_DEFER_UPDATES | EDIT_AUTOSUMMARY;
-		$status = $article->doEdit( $content, $summary, $flags,false,$wgUser);
+		$articleContent = ContentHandler::makeContent( $content, $titleObj );
+		$status = $article->doEditContent( $articleContent, $summary, $flags, false, $wgUser);
 		$result = true;
 		if ( !$status->isOK() ) {
 			$result = $status->getErrorsArray();
