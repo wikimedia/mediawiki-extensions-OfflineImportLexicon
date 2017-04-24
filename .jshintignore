@@ -1,3 +1,5 @@
+node_modules/**
+
 /* Ignore js files we carnt edit direct */
 scripts/jquery.ezpz_tooltip.js
 scripts/jquery.ezpz_tooltip.min.js
