@@ -1,4 +1,5 @@
 node_modules/**
+vendor/**
 
 /* Ignore js files we carnt edit direct */
 scripts/jquery.ezpz_tooltip.js
