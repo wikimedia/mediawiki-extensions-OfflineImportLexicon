@@ -1,5 +1,10 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Robby"
+		]
+	},
 	"offlineimportlexicon": "{{doc-special}}",
 	"offlineimportlexicon-desc": "{{desc|name=OfflineImportLexicon|url=https://www.mediawiki.org/wiki/Extension:OfflineImportLexicon}}",
 	"offlineimportlexicon-initial-text": "A intro text",
@@ -47,10 +52,10 @@
 	"offlineimportlexicon-subtitle": "A label message",
 	"offlineimportlexicon-place-of-publication": "A label message",
 	"offlineimportlexicon-year-of-publication": "A label message",
-	"offlineimportlexicon-editor": "A label message",
+	"offlineimportlexicon-editor": "A label message, this means the people that edited lexicon.\n{{Identical|Editor}}",
 	"offlineimportlexicon-publisher": "A label message",
 	"offlineimportlexicon-edition": "A label message",
-	"offlineimportlexicon-language": "A label message",
+	"offlineimportlexicon-language": "A label message\n{{Identical|Language}}",
 	"offlineimportlexicon-number-of-volumes": "A label message",
 	"offlineimportlexicon-create-lexicon": "A button text",
 	"offlineimportlexicon-cancel": "A button text",

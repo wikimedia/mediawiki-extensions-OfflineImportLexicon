@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"offlineimportlexicon-content-5": "Veuillez entrer l'année de publication. Les valeurs multiples doivent être séparées par \"; \" (obligatoirement).",
+	"offlineimportlexicon-content-26": "Veuillez entrer la maison d'édition. Les valeurs multiples doivent être séparées par \"; \".",
+	"offlineimportlexicon-new-volume": "Nouveau volume",
+	"offlineimportlexicon-volume": "Volume",
+	"offlineimportlexicon-volumes": "Volumes",
+	"offlineimportlexicon-new-lemma": "Nouveau lemme",
+	"offlineimportlexicon-lemma": "Lemme",
+	"offlineimportlexicon-title": "Titre",
+	"offlineimportlexicon-subtitle": "Sous-titre",
+	"offlineimportlexicon-place-of-publication": "Lieu de publication",
+	"offlineimportlexicon-year-of-publication": "Année de publication",
+	"offlineimportlexicon-editor": "Contributeur",
+	"offlineimportlexicon-publisher": "Éditeur",
+	"offlineimportlexicon-edition": "Édition",
+	"offlineimportlexicon-language": "Langue",
+	"offlineimportlexicon-number-of-volumes": "Nombre de volumes",
+	"offlineimportlexicon-cancel": "Annuler",
+	"offlineimportlexicon-volume-number": "Numéro de volume",
+	"offlineimportlexicon-physical-description": "Description physique",
+	"offlineimportlexicon-create-volume": "Créer un volume",
+	"offlineimportlexicon-type": "Type",
+	"offlineimportlexicon-author": "Auteur(s)",
+	"offlineimportlexicon-first-page-n": "Numéro de la première page",
+	"offlineimportlexicon-last-page-n": "Numéro de la dernière page",
+	"offlineimportlexicon-alternate": "Nom de substitution pour les images",
+	"offlineimportlexicon-rights-holder": "Détenteur des droits",
+	"offlineimportlexicon-refresh": "Rafraîchir"
+}
