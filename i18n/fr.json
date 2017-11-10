@@ -1,11 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
+	"offlineimportlexicon": "Lexique d’importation hors connexion",
+	"offlineimportlexicon-desc": "Lexique d’importation hors connexion dans MédiaWiki Sémantique",
+	"offlineimportlexicon-initial-text": "Cette page aide l’utilisateur à récolter les entités du lexique en utilisant un ensemble de métadonnées minimal<br /><br />",
+	"offlineimportlexicon-content-4": "Veuillez entrer le lieu de publication. Les valeurs multiples sont séparées par \"; \" (obligatoirement).",
 	"offlineimportlexicon-content-5": "Veuillez entrer l'année de publication. Les valeurs multiples doivent être séparées par \"; \" (obligatoirement).",
+	"offlineimportlexicon-content-10": "Veuillez choisir le nombre de volumes.",
+	"offlineimportlexicon-content-21": "Veuillez entrer le titre du volume (obligatoirement).",
+	"offlineimportlexicon-content-22": "Veuillez entrer le sous-titre du volume.",
+	"offlineimportlexicon-content-24": "Veuillez entrer l'année de publication (obligatoire).",
 	"offlineimportlexicon-content-26": "Veuillez entrer la maison d'édition. Les valeurs multiples doivent être séparées par \"; \".",
+	"offlineimportlexicon-content-28": "Veuillez entrer le numéro de volume (exemple: 1).",
 	"offlineimportlexicon-new-volume": "Nouveau volume",
 	"offlineimportlexicon-volume": "Volume",
 	"offlineimportlexicon-volumes": "Volumes",
@@ -26,9 +36,13 @@
 	"offlineimportlexicon-create-volume": "Créer un volume",
 	"offlineimportlexicon-type": "Type",
 	"offlineimportlexicon-author": "Auteur(s)",
+	"offlineimportlexicon-first-page-g": "Numéro de la première page (étiquette)",
+	"offlineimportlexicon-last-page-g": "Numéro de la dernière page (étiquette)",
 	"offlineimportlexicon-first-page-n": "Numéro de la première page",
 	"offlineimportlexicon-last-page-n": "Numéro de la dernière page",
 	"offlineimportlexicon-alternate": "Nom de substitution pour les images",
 	"offlineimportlexicon-rights-holder": "Détenteur des droits",
+	"offlineimportlexicon-create-lemma": "Créer un lemme",
+	"offlineimportlexicon-add-media": "Ajouter des métadonnées de média",
 	"offlineimportlexicon-refresh": "Rafraîchir"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Danielbeerbonn"
 		]
 	},
 	"offlineimportlexicon": "Offline-Lexikon importieren",
@@ -65,8 +66,8 @@
 	"offlineimportlexicon-author": "Autor(en)",
 	"offlineimportlexicon-first-page-g": "Erste Seitennummerierung (Bezeichnung)",
 	"offlineimportlexicon-last-page-g": "Letzte Seitennummerierung (Bezeichnung)",
-	"offlineimportlexicon-first-page-n": "Erste Seitennummer",
-	"offlineimportlexicon-last-page-n": "Letzte Seitennummer",
+	"offlineimportlexicon-first-page-n": "Erste Seitenzahl",
+	"offlineimportlexicon-last-page-n": "Letzte Seitenzahl",
 	"offlineimportlexicon-alternate": "Alternativname für Bilder",
 	"offlineimportlexicon-rights-holder": "Rechteinhaber",
 	"offlineimportlexicon-create-lemma": "Lemma erstellen",

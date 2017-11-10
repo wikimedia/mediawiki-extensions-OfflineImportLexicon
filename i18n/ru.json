@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"offlineimportlexicon-lemma": "Лемма",
+	"offlineimportlexicon-place-of-publication": "Место издания",
+	"offlineimportlexicon-year-of-publication": "Год издания",
+	"offlineimportlexicon-publisher": "Издатель",
+	"offlineimportlexicon-edition": "Издание",
+	"offlineimportlexicon-language": "Язык",
+	"offlineimportlexicon-type": "Тип",
+	"offlineimportlexicon-author": "Автор(ы)",
+	"offlineimportlexicon-refresh": "Обновить"
+}
