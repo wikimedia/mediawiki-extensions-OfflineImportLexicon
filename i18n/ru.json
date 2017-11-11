@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Goodgoy"
 		]
 	},
+	"offlineimportlexicon-lexicon": "Лексикон",
 	"offlineimportlexicon-lemma": "Лемма",
+	"offlineimportlexicon-subtitle": "Подзаголовок",
 	"offlineimportlexicon-place-of-publication": "Место издания",
 	"offlineimportlexicon-year-of-publication": "Год издания",
 	"offlineimportlexicon-publisher": "Издатель",
