@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"offlineimportlexicon-content-22": "Inserta el subtítulo del volumen.",
+	"offlineimportlexicon-new-volume": "Volumen nuevo",
+	"offlineimportlexicon-volume": "Volumen",
+	"offlineimportlexicon-volumes": "Volúmenes",
+	"offlineimportlexicon-title": "Título",
+	"offlineimportlexicon-subtitle": "Subtítulo",
+	"offlineimportlexicon-place-of-publication": "Lugar de publicación",
+	"offlineimportlexicon-year-of-publication": "Año de publicación",
+	"offlineimportlexicon-publisher": "Editorial",
+	"offlineimportlexicon-edition": "Edición",
+	"offlineimportlexicon-language": "Idioma",
+	"offlineimportlexicon-number-of-volumes": "Número de volúmenes",
+	"offlineimportlexicon-cancel": "Cancelar",
+	"offlineimportlexicon-volume-number": "Número de volumen",
+	"offlineimportlexicon-create-volume": "Crear volumen",
+	"offlineimportlexicon-type": "Tipo",
+	"offlineimportlexicon-author": "Autor(es)",
+	"offlineimportlexicon-refresh": "Actualizar"
+}
