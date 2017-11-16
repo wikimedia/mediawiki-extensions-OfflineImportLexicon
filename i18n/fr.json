@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
 	"offlineimportlexicon": "Lexique d’importation hors connexion",
@@ -11,7 +12,7 @@
 	"offlineimportlexicon-content-1": "Veuillez insérer le titre du lexique (obligatoire).",
 	"offlineimportlexicon-content-2": "Veuillez insérer un titre court pour le lexique. Il est standardisé en « année de publication du premier volume »-« année de publication du dernier volume (sans le siècle) »-« dernier nom de l’éditeur », comme : 1858-65-Wörle-Schumann (obligatoire).",
 	"offlineimportlexicon-content-3": "Veuillez insérer le sous-titre du lexique.",
-	"offlineimportlexicon-content-4": "Veuillez entrer le lieu de publication. Les valeurs multiples sont séparées par \"; \" (obligatoirement).",
+	"offlineimportlexicon-content-4": "Veuillez entrer le lieu de publication. Les valeurs multiples sont séparées par « ; » (obligatoirement).",
 	"offlineimportlexicon-content-5": "Veuillez entrer l'année de publication. Les valeurs multiples doivent être séparées par \"; \" (obligatoirement).",
 	"offlineimportlexicon-content-6": "Veuillez entrer le ou les éditeur(s) en séparant le prénom du nom à l'aide de \", \" (Prénom, Nom; ...). Les valeurs multiples doivent être séparées par \"; \" (obligatoire).",
 	"offlineimportlexicon-content-7": "Veuillez entrer la maison d'édition. Les valeurs multiples doivent être séparées par \"; \".",
@@ -23,7 +24,7 @@
 	"offlineimportlexicon-content-23": "Veuillez insérer l’emplacement de publication. Des valeurs multiples doivent être séparées par « ;  » (obligatoire).",
 	"offlineimportlexicon-content-24": "Veuillez entrer l'année de publication (obligatoire).",
 	"offlineimportlexicon-content-25": "Veuillez insérer le(s) éditeur(s) avec d’abord le prénom et le nom séparés par « ,  » (Prénom, Nom; …). Les valeurs multiples doivent être séparées par « ;  » (obligatoire).",
-	"offlineimportlexicon-content-26": "Veuillez entrer la maison d'édition. Les valeurs multiples doivent être séparées par \"; \".",
+	"offlineimportlexicon-content-26": "Veuillez entrer la maison d'édition. Les valeurs multiples doivent être séparées par « ; ».",
 	"offlineimportlexicon-content-27": "Veuillez insérer la langue du lexique, comme ger (ISO 639-2).",
 	"offlineimportlexicon-content-28": "Veuillez entrer le numéro de volume (exemple: 1).",
 	"offlineimportlexicon-content-29": "Insérer une description supplémentaire du lexique.",
@@ -34,9 +35,9 @@
 	"offlineimportlexicon-content-35": "Veuillez entrer le nombre de pages comptées depuis le début du livre jusqu'au début de l'article (obligatoire).",
 	"offlineimportlexicon-content-355": "Veuillez insérer la langue du lexique, comme ger (ISO-639-2).",
 	"offlineimportlexicon-content-36": "Veuillez entrer le nombre de pages comptées du début du livre jusqu'à la fin de l'article (obligatoire).",
-	"offlineimportlexicon-content-37": "Veuillez insérer le nombre qui sera écrit sur la page du livre au début de l’article, comme : 30 ou XI.",
-	"offlineimportlexicon-content-38": "Veuillez insérer le nombre qui sera écrit sur la page du livre à la fin de l’article, comme 30 ou XI.",
-	"offlineimportlexicon-content-39": "Veuillez insérer le nom des images. Pour des images déjà téléchargées, veuillez fournir le chemin complet vers l’URL du wiki contenant le nom court et le volume (1840-42-Münch-Volume-01-00000015.jpg). L’URL de l÷’image doit être créée sous la forme « nom court du lexique »-Volume-« Numéro de volume »-« 00000015.jpg » (=nombre de pages physiques du livre)",
+	"offlineimportlexicon-content-37": "Veuillez insérer le nombre qui est écrit sur la page du livre au début de l’article, comme 30 ou XI.",
+	"offlineimportlexicon-content-38": "Veuillez insérer le nombre qui est écrit sur la page du livre à la fin de l’article, comme 30 ou XI.",
+	"offlineimportlexicon-content-39": "Veuillez insérer le nom des images. Pour des images déjà téléversées, veuillez fournir le chemin complet vers l’URL du wiki contenant le nom court et le volume (1840-42-Münch-Volume-01-00000015.jpg). L’URL de l’image doit être créée sous la forme « nom court du lexique »-Volume-« Numéro de volume »-« 00000015.jpg » (=nombre de pages physiques du livre)",
 	"offlineimportlexicon-content-40": "Veuillez insérer un texte libre sur les droits de redevance du lexique.",
 	"offlineimportlexicon-new-lexicon": "Nouveau lexique",
 	"offlineimportlexicon-lexicon": "Lexique",
@@ -52,8 +53,8 @@
 	"offlineimportlexicon-subtitle": "Sous-titre",
 	"offlineimportlexicon-place-of-publication": "Lieu de publication",
 	"offlineimportlexicon-year-of-publication": "Année de publication",
-	"offlineimportlexicon-editor": "Contributeur",
-	"offlineimportlexicon-publisher": "Éditeur",
+	"offlineimportlexicon-editor": "Éditeur",
+	"offlineimportlexicon-publisher": "Maison d’édition",
 	"offlineimportlexicon-edition": "Édition",
 	"offlineimportlexicon-language": "Langue",
 	"offlineimportlexicon-number-of-volumes": "Nombre de volumes",

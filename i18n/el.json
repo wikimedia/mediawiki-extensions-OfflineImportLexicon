@@ -31,6 +31,7 @@
 	"offlineimportlexicon-content-34": "Παρακαλώ εισάγετε το όνομα  και επίθετο του συγγραφέα (συγγραφέων), χωρισμένο με '','' (Κύριο όνομα, Επίθετο..)Πολλές λέξεις πρέπει να χωρίζονται με '','' (υποχρεωτικό).",
 	"offlineimportlexicon-content-35": "Παρακαλώ εισάγετε τον αριθμό των σελίδων που μετρήθηκαν στην αρχή του βιβλίου μέχρι την αρχή του άρθρου (υποχρεωτικό).",
 	"offlineimportlexicon-content-355": "Παρακαλώ εισάγετε την γλώσσα του λεξικού, όπως Γερ. (ISO 639-2)",
+	"offlineimportlexicon-content-36": "Παρακαλώ εισάγετε τον αριθμό σελίδων που μετρήθηκαν από την αρχή του βιβλίου ως το τέλος του άρθρου (υποχρεωτικό)",
 	"offlineimportlexicon-content-37": "Παρακαλώ εισάγετε τον αριθμό που είναι γραμμένος στην σελίδα του βιβλίου στην αρχή του άρθρου όπως: 30 ή ΧΙ.",
 	"offlineimportlexicon-content-38": "Παρακαλώ εισάγετε τον αριθμό που είναι γραμμένος στην σελίδα του βιβλίου και τελειώνει στο άρθρο όπως 30 ή ΧΙ.",
 	"offlineimportlexicon-content-39": "Παρακαλώ εισάγετε τον τίτλο των εικόνων. Για προηγούμενες σελίδες ανεβασμένες στον υπολογιστή, παρακαλώ δώστε τον πλήρη τρόπο διαδικασίας του  wiki-url που περιέχει μικρό τίτλο και όγκο. (1840-42-Münch-Volume-01-00000015.jpg). Το URL της εικόνας πρέπει να δημιουργηθεί σαν   \"μικρός τίτλος του λεξικού\"-Volume-\"volumenumber\"-\"00000015.jpg (=απαρίθμηση σελίδων του βιβλίου)",
@@ -44,6 +45,7 @@
 	"offlineimportlexicon-new-lemma": "Νέο Λήμμα",
 	"offlineimportlexicon-lemma": "Λήμμα",
 	"offlineimportlexicon-lemmata": "Λήμματα",
+	"offlineimportlexicon-title": "Τίτλος",
 	"offlineimportlexicon-short": "Μικρός τίτλος του λεξικού",
 	"offlineimportlexicon-subtitle": "Υπότιτλος",
 	"offlineimportlexicon-place-of-publication": "Τόπος δημοσίευσης",
@@ -54,6 +56,7 @@
 	"offlineimportlexicon-language": "Γλώσσα",
 	"offlineimportlexicon-number-of-volumes": "Αριθμός λέξεων",
 	"offlineimportlexicon-create-lexicon": "Φτιάξετε λεξικό",
+	"offlineimportlexicon-cancel": "Ακυρώστε",
 	"offlineimportlexicon-volume-number": "Αριθμός όγκου λέξεων",
 	"offlineimportlexicon-physical-description": "Φυσική περιγραφή",
 	"offlineimportlexicon-create-volume": "Φτιάξετε όγκο λέξεων",
@@ -65,5 +68,7 @@
 	"offlineimportlexicon-last-page-n": "Αριθμός τελευταίας σελίδας",
 	"offlineimportlexicon-alternate": "Εναλλακτικό όνομα εικόνων",
 	"offlineimportlexicon-rights-holder": "Δικαιούχος",
+	"offlineimportlexicon-create-lemma": "Φτιάξετε λήμμα",
+	"offlineimportlexicon-add-media": "Προσθέστε ενδιάμεσα στοιχεία",
 	"offlineimportlexicon-refresh": "Ανανεώστε"
 }
