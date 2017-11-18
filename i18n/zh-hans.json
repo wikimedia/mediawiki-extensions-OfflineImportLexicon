@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"NeverBehave"
 		]
 	},
 	"offlineimportlexicon": "离线导入辞典",
@@ -45,7 +46,7 @@
 	"offlineimportlexicon-volumes": "卷",
 	"offlineimportlexicon-new-lemma": "新引理",
 	"offlineimportlexicon-lemma": "引理",
-	"offlineimportlexicon-lemmata": "题词",
+	"offlineimportlexicon-lemmata": "词目",
 	"offlineimportlexicon-title": "标题",
 	"offlineimportlexicon-short": "辞典的简短标题",
 	"offlineimportlexicon-subtitle": "副标题",
@@ -69,7 +70,7 @@
 	"offlineimportlexicon-last-page-n": "最后页码",
 	"offlineimportlexicon-alternate": "图片的别名",
 	"offlineimportlexicon-rights-holder": "权利持有人",
-	"offlineimportlexicon-create-lemma": "创建引理",
+	"offlineimportlexicon-create-lemma": "创建词目",
 	"offlineimportlexicon-add-media": "添加媒体元数据",
 	"offlineimportlexicon-refresh": "刷新"
 }

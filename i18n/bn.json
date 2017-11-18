@@ -16,5 +16,7 @@
 	"offlineimportlexicon-language": "ভাষা",
 	"offlineimportlexicon-cancel": "বাতিল",
 	"offlineimportlexicon-type": "ধরন",
-	"offlineimportlexicon-author": "লেখক(গণ)"
+	"offlineimportlexicon-author": "লেখক(গণ)",
+	"offlineimportlexicon-last-page-n": "শেষ পাতার নম্বর",
+	"offlineimportlexicon-refresh": "পুনঃসতেজ"
 }
