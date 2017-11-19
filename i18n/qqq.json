@@ -63,7 +63,7 @@
 	"offlineimportlexicon-physical-description": "A label message",
 	"offlineimportlexicon-create-volume": "A button text",
 	"offlineimportlexicon-type": "A label message",
-	"offlineimportlexicon-author": "A label message",
+	"offlineimportlexicon-author": "A label message\n{{Identical|Author}}",
 	"offlineimportlexicon-first-page-g": "A label message",
 	"offlineimportlexicon-last-page-g": "A label message",
 	"offlineimportlexicon-first-page-n": "A label message",

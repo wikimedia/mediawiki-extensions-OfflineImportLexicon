@@ -3,7 +3,8 @@
 		"authors": [
 			"Kareyac",
 			"Goodgoy",
-			"Wirbel78"
+			"Wirbel78",
+			"Smigles"
 		]
 	},
 	"offlineimportlexicon-lexicon": "Лексикон",
@@ -17,6 +18,7 @@
 	"offlineimportlexicon-edition": "Издание",
 	"offlineimportlexicon-language": "Язык",
 	"offlineimportlexicon-cancel": "Отмена",
+	"offlineimportlexicon-physical-description": "Физическое описание",
 	"offlineimportlexicon-type": "Тип",
 	"offlineimportlexicon-author": "Автор(ы)",
 	"offlineimportlexicon-first-page-n": "Номер первой страницы",
