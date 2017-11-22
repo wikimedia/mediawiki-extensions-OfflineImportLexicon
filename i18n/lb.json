@@ -32,7 +32,11 @@
 	"offlineimportlexicon-create-volume": "Band uleeën",
 	"offlineimportlexicon-type": "Typ",
 	"offlineimportlexicon-author": "Auteur(en)",
+	"offlineimportlexicon-first-page-g": "Numerotatioun fir déi éischt Säit (Etikett)",
+	"offlineimportlexicon-last-page-g": "Numerotatioun fir déi lescht Säit (Etikett)",
+	"offlineimportlexicon-first-page-n": "Nummer vun der éischter Säit",
 	"offlineimportlexicon-last-page-n": "Nummer vun der leschter Säit",
+	"offlineimportlexicon-alternate": "Alternative Numm fir Biller",
 	"offlineimportlexicon-create-lemma": "Lemma uleeën",
 	"offlineimportlexicon-refresh": "Aktualiséieren"
 }
