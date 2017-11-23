@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zainab Meher"
+			"Zainab Meher",
+			"BukhariSaeed"
 		]
 	},
 	"offlineimportlexicon-content-5": "براہِ مہربانی اشاعت کا سال شامل کریں۔کثیر رقوم کو  \"; \"کے ساتھ الگ لکھنا چاہیۓ (منشور/ہدایتی)",
 	"offlineimportlexicon-volume": "حجم",
 	"offlineimportlexicon-year-of-publication": "اشاعت کا سال",
-	"offlineimportlexicon-author": "مصنف(مصنفین)"
+	"offlineimportlexicon-author": "مصنف"
 }
