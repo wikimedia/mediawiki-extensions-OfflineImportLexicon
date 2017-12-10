@@ -88,7 +88,7 @@ function GetFormF( &$data, $skin = null ) {
 }
 
 /**
- * $article: the article (object) saved
+ * WikiPage $wikiPage: the wikipage (object) saved
  * $user: the user (object) who saved the article
  * $text: the new article text
  * $summary: the article summary (comment)
@@ -97,11 +97,11 @@ function GetFormF( &$data, $skin = null ) {
  * $section: section #
  */
 
-function CheckSave(  $article, $user) {
+function CheckSave( WikiPage $wikiPage, $user) {
 	global $wgOut, $wgScriptPath;
 
-	$articleId = $article->getID();
-	$articleTitle = $article -> getTitle();
+	$articleId = $wikiPage->getID();
+	$articleTitle = $wikiPage -> getTitle();
 	$userId = $user->getName();
 
 	$dbw = wfGetDB( DB_MASTER );
