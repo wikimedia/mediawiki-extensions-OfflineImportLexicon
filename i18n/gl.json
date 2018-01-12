@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Athena in Wonderland"
 		]
 	},
+	"offlineimportlexicon-new-lexicon": "Léxico novo",
+	"offlineimportlexicon-lexicon": "Léxico",
+	"offlineimportlexicon-lexicons": "Léxicos",
+	"offlineimportlexicon-new-volume": "Volume novo",
 	"offlineimportlexicon-volume": "Volume",
 	"offlineimportlexicon-volumes": "Volumes",
 	"offlineimportlexicon-new-lemma": "Novo lema",
