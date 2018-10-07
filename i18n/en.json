@@ -69,5 +69,6 @@
 	"offlineimportlexicon-rights-holder": "Rights holder",
 	"offlineimportlexicon-create-lemma": "Create lemma",
 	"offlineimportlexicon-add-media": "Add media metadata",
-	"offlineimportlexicon-refresh": "Refresh"
+	"offlineimportlexicon-refresh": "Refresh",
+	"right-offlineimportlexicon": "Create wiki pages with lexicon data"
 }

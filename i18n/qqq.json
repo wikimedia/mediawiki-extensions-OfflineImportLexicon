@@ -72,5 +72,6 @@
 	"offlineimportlexicon-rights-holder": "A label message",
 	"offlineimportlexicon-create-lemma": "A button text",
 	"offlineimportlexicon-add-media": "A button text",
-	"offlineimportlexicon-refresh": "A button text\n{{Identical|Refresh}}"
+	"offlineimportlexicon-refresh": "A button text\n{{Identical|Refresh}}",
+	"right-offlineimportlexicon": "{{doc-right|offlineimportlexicon}}"
 }
