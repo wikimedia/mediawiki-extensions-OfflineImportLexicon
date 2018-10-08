@@ -73,5 +73,6 @@
 	"offlineimportlexicon-rights-holder": "Détenteur des droits",
 	"offlineimportlexicon-create-lemma": "Créer un lemme",
 	"offlineimportlexicon-add-media": "Ajouter des métadonnées de média",
-	"offlineimportlexicon-refresh": "Rafraîchir"
+	"offlineimportlexicon-refresh": "Rafraîchir",
+	"right-offlineimportlexicon": "Créer des pages du wiki avec les données du lexique"
 }

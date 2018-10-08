@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"محمد أحمد عبد الفتاح",
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"offlineimportlexicon": "استيراد معجم غير متصل",
@@ -72,5 +73,6 @@
 	"offlineimportlexicon-rights-holder": "صاحب الحقوق",
 	"offlineimportlexicon-create-lemma": "إنشاء ليما",
 	"offlineimportlexicon-add-media": "إضافة بيانات وصفية",
-	"offlineimportlexicon-refresh": "تحديث"
+	"offlineimportlexicon-refresh": "تحديث",
+	"right-offlineimportlexicon": "إنشاء صفحات ويكي ببيانات لغوية"
 }
