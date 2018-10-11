@@ -71,5 +71,6 @@
 	"offlineimportlexicon-rights-holder": "Detentor dos direitos",
 	"offlineimportlexicon-create-lemma": "Criar lema",
 	"offlineimportlexicon-add-media": "Adicionar metadados de multimédia",
-	"offlineimportlexicon-refresh": "Atualizar"
+	"offlineimportlexicon-refresh": "Atualizar",
+	"right-offlineimportlexicon": "Criar páginas wiki com dados de léxico"
 }
