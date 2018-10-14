@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"NeverBehave"
+			"NeverBehave",
+			"A Chinese Wikipedian"
 		]
 	},
 	"offlineimportlexicon": "离线导入辞典",
@@ -72,5 +73,6 @@
 	"offlineimportlexicon-rights-holder": "权利持有人",
 	"offlineimportlexicon-create-lemma": "创建引理",
 	"offlineimportlexicon-add-media": "添加媒体元数据",
-	"offlineimportlexicon-refresh": "刷新"
+	"offlineimportlexicon-refresh": "刷新",
+	"right-offlineimportlexicon": "以言数创wiki页面"
 }
