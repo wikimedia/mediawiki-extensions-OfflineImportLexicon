@@ -70,5 +70,6 @@
 	"offlineimportlexicon-create-lemma": "Create lemma",
 	"offlineimportlexicon-add-media": "Add media metadata",
 	"offlineimportlexicon-refresh": "Refresh",
+	"action-offlineimportlexicon": "create wiki pages with lexicon data",
 	"right-offlineimportlexicon": "Create wiki pages with lexicon data"
 }

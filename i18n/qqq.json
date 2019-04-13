@@ -73,5 +73,6 @@
 	"offlineimportlexicon-create-lemma": "A button text",
 	"offlineimportlexicon-add-media": "A button text",
 	"offlineimportlexicon-refresh": "A button text\n{{Identical|Refresh}}",
+	"action-offlineimportlexicon": "{{doc-action|offlineimportlexicon}}",
 	"right-offlineimportlexicon": "{{doc-right|offlineimportlexicon}}"
 }
