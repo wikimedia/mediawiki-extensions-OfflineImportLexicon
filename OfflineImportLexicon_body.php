@@ -67,7 +67,13 @@ class OfflineImportLexicon extends SpecialPage {
 		$selectoutput = $wgRequest->getVal( 'selectoutput' );
 
 		if ( !($wgUser->isLoggedIn() ) ) {
-			$wgOut->addWikiText("User must be logged in.") ;
+			$wikitext = "User must be logged in.";
+			if ( method_exists( $wgOut, 'addWikiTextAsInterface' ) ) {
+				// MW 1.32+
+				$wgOut->addWikiTextAsInterface( $wikitext );
+			} else {
+				$wgOut->addWikiText( $wikitext );
+			}
 			return false;
 		} else {
 			$formfields =  "<div class = 'import-init' id='import-init'>
