@@ -5,7 +5,7 @@
  * Time: 20:47
  * To change this template use File | Settings | File Templates.
  */
-//API documentation is at http://www.mediawiki.org/wiki/Api
+//API documentation is at https://www.mediawiki.org/wiki/Api
 //JsMwApi documentation is at http://en.wiktionary.org/wiki/User_talk:Conrad.Irwin/Api.js
 //Basic usage for the impatient: JsMwApi()({action:'query',prop:'meta'},function(res){alert(res)});
 
