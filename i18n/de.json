@@ -73,5 +73,6 @@
 	"offlineimportlexicon-create-lemma": "Lemma erstellen",
 	"offlineimportlexicon-add-media": "Medien-Metadaten hinzufügen",
 	"offlineimportlexicon-refresh": "Aktualisieren",
+	"action-offlineimportlexicon": "Wikiseiten mit Lexikondaten zu erstellen",
 	"right-offlineimportlexicon": "Wikiseiten mit Lexikondaten erstellen"
 }

@@ -6,7 +6,7 @@
 		]
 	},
 	"offlineimportlexicon": "離線匯入辭典",
-	"offlineimportlexicon-desc": "離線匯入辭典至語義 MediaWiki",
+	"offlineimportlexicon-desc": "離線匯入辭典至 Semantic MediaWiki",
 	"offlineimportlexicon-initial-text": "此頁面能協助使用者採取最少量的詮釋資料集，來生成辭典項目<br /><br />",
 	"offlineimportlexicon-content-1": "請插入辭典的標題（必填）。",
 	"offlineimportlexicon-content-2": "請插入辭典的簡短標題。標準格式是「第一冊的出版年份-最後一冊的出版年份（不帶對應世紀的數字）-編者的姓氏 」。例如：1858-65-Wörle-Schumann（必填）。",
@@ -73,5 +73,6 @@
 	"offlineimportlexicon-create-lemma": "建立標題字",
 	"offlineimportlexicon-add-media": "添加多媒體的詮釋資料",
 	"offlineimportlexicon-refresh": "重新整理",
+	"action-offlineimportlexicon": "以辭典資料建立 wiki 頁面",
 	"right-offlineimportlexicon": "以辭典資料建立 wiki 頁面"
 }

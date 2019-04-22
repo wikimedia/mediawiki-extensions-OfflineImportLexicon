@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardo Addad de Oliveira"
+			"Eduardo Addad de Oliveira",
+			"Leonardo.guimaraes"
 		]
 	},
 	"offlineimportlexicon": "Importação offline de léxico",
@@ -72,5 +73,6 @@
 	"offlineimportlexicon-create-lemma": "Criar lema",
 	"offlineimportlexicon-add-media": "Adicionar metadados de multimédia",
 	"offlineimportlexicon-refresh": "Atualizar",
+	"action-offlineimportlexicon": "crie páginas wiki com dados léxico",
 	"right-offlineimportlexicon": "Crie páginas wiki com dados de léxico"
 }
