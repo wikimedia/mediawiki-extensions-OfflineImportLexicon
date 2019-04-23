@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"offlineimportlexicon-title": "Titel",
+	"offlineimportlexicon-language": "Taal",
+	"offlineimportlexicon-cancel": "Annuleren",
+	"offlineimportlexicon-author": "Auteur(s)",
+	"offlineimportlexicon-refresh": "Verversen"
+}
