@@ -72,5 +72,6 @@
 	"offlineimportlexicon-create-lemma": "Criar lema",
 	"offlineimportlexicon-add-media": "Adicionar metadados de multimédia",
 	"offlineimportlexicon-refresh": "Atualizar",
+	"action-offlineimportlexicon": "criar páginas wiki com dados de léxico",
 	"right-offlineimportlexicon": "Criar páginas wiki com dados de léxico"
 }
