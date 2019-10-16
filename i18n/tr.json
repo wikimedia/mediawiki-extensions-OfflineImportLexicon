@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"BaRaN6161 TURK"
 		]
 	},
 	"offlineimportlexicon": "Çevrimdışı içe aktarma sözlüğü",
@@ -71,5 +72,7 @@
 	"offlineimportlexicon-rights-holder": "Hak sahibi",
 	"offlineimportlexicon-create-lemma": "Lemma yarat",
 	"offlineimportlexicon-add-media": "Medya meta verileri ekle",
-	"offlineimportlexicon-refresh": "Yenile"
+	"offlineimportlexicon-refresh": "Yenile",
+	"action-offlineimportlexicon": "sözlük verileriyle wiki sayfaları oluşturun",
+	"right-offlineimportlexicon": "Sözlük verileriyle wiki sayfaları oluşturun"
 }
