@@ -20,9 +20,6 @@ function JsMwApi (api_url, request_type) {
 
     if (!api_url)
     {
-        if (typeof(wgEnableAPI) === 'undefined' || wgEnableAPI == false)
-            throw "Local API is not usable.";
-
         api_url = wgScriptPath + "/api.php";
     }
 
