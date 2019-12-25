@@ -2,20 +2,11 @@
 /**
  * Aliases for special pages
  *
+ * @file
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
-$specialPageAliases['en'] = array(
-	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
-);
-
-/** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
-);
-
-/** French (Français) */
-$specialPageAliases['fr'] = array(
-	'OfflineImportLexicon' => array( 'OfflineImportLexicon' ),
-);
+$specialPageAliases['en'] = [
+	'OfflineImportLexicon' => [ 'OfflineImportLexicon' ],
+];
