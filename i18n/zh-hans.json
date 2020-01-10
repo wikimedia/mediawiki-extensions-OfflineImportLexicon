@@ -3,7 +3,8 @@
 		"authors": [
 			"Liuxinyu970226",
 			"NeverBehave",
-			"A Chinese Wikipedian"
+			"A Chinese Wikipedian",
+			"沈澄心"
 		]
 	},
 	"offlineimportlexicon": "离线导入辞典",
@@ -28,9 +29,9 @@
 	"offlineimportlexicon-content-27": "请插入辞典的语言代码（ISO 639-2），例如ger。",
 	"offlineimportlexicon-content-28": "请插入卷数（例如1）。",
 	"offlineimportlexicon-content-29": "插入辞典的进一步描述。",
-	"offlineimportlexicon-content-31": "插入卷引理的标题（必填）。",
+	"offlineimportlexicon-content-31": "插入卷词根的标题（必填）。",
 	"offlineimportlexicon-content-32": "选择条目类型，例如引理、目录、词条、前言或扉页（必填）。",
-	"offlineimportlexicon-content-33": "请插入引理的副标题。",
+	"offlineimportlexicon-content-33": "请插入词根的副标题。",
 	"offlineimportlexicon-content-34": "请插入作者名，姓名之间用“, ”分隔（姓氏, 名字; ...）。多个值应当用“; ”分隔（必填）。",
 	"offlineimportlexicon-content-35": "请插入从图书开始计算的页数至条目开头（必填）。",
 	"offlineimportlexicon-content-355": "请插入辞典的语言代码（ISO 639-2），例如ger。",
@@ -45,8 +46,8 @@
 	"offlineimportlexicon-new-volume": "新卷",
 	"offlineimportlexicon-volume": "卷",
 	"offlineimportlexicon-volumes": "卷",
-	"offlineimportlexicon-new-lemma": "新引理",
-	"offlineimportlexicon-lemma": "引理",
+	"offlineimportlexicon-new-lemma": "新词根",
+	"offlineimportlexicon-lemma": "词根",
 	"offlineimportlexicon-lemmata": "词目",
 	"offlineimportlexicon-title": "标题",
 	"offlineimportlexicon-short": "辞典的简短标题",
@@ -71,7 +72,7 @@
 	"offlineimportlexicon-last-page-n": "最后页码",
 	"offlineimportlexicon-alternate": "图片的别名",
 	"offlineimportlexicon-rights-holder": "权利持有人",
-	"offlineimportlexicon-create-lemma": "创建引理",
+	"offlineimportlexicon-create-lemma": "创建词根",
 	"offlineimportlexicon-add-media": "添加媒体元数据",
 	"offlineimportlexicon-refresh": "刷新",
 	"right-offlineimportlexicon": "以言数创wiki页面"
