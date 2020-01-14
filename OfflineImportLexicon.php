@@ -73,7 +73,7 @@ function ResourcesJSJ( OutputPage $out ) {
 }
 
 function GetFormF( &$data, $skin = null ) {
-	global  $wgOut, $wgUser, $wgExtensionAssetsPath;
+	global  $wgOut, $wgExtensionAssetsPath;
 
 	if( is_null( $skin ) ) {
 		global $wgTitle;
