@@ -15,7 +15,9 @@ class OfflineImportLexicon extends SpecialPage {
 	 *
 	 */
 	public function execute( $par ) {
-		global $wgOut, $wgRequest, $wgUser;
+		global $wgOut, $wgRequest;
+
+		$user = $this->getUser();
 
 		$this->setHeaders();
 		$this->outputHeader();
@@ -66,7 +68,7 @@ class OfflineImportLexicon extends SpecialPage {
 		$selectcompare = $wgRequest->getVal( 'selectcompare' );
 		$selectoutput = $wgRequest->getVal( 'selectoutput' );
 
-		if ( !($wgUser->isLoggedIn() ) ) {
+		if ( !($user->isLoggedIn() ) ) {
 			$wikitext = "User must be logged in.";
 			if ( method_exists( $wgOut, 'addWikiTextAsInterface' ) ) {
 				// MW 1.32+
@@ -325,15 +327,14 @@ class OfflineImportLexicon extends SpecialPage {
 	}
 
 	function savePage( $title, $content, $doNotUpdate = false, $flag, $summary = "New wiki page has been created." ) {
-		global  $wgUser;
-
 		$flags = $flag;
 		$titleObj = Title::newFromtext($title);
+		$user = $this->getUser();
 
-		$article = new Article($titleObj);
+		$wikiPage = WikiPage::factory( $titleObj );
 		$flags = $flags|EDIT_DEFER_UPDATES | EDIT_AUTOSUMMARY;
 		$articleContent = ContentHandler::makeContent( $content, $titleObj );
-		$status = $article->doEditContent( $articleContent, $summary, $flags, false, $wgUser);
+		$status = $wikiPage->doEditContent( $articleContent, $summary, $flags, false, $user);
 		$result = true;
 		if ( !$status->isOK() ) {
 			$result = $status->getErrorsArray();
