@@ -41,7 +41,12 @@ $wgGroupPermissions['user']['offlineimportlexicon'] = true;
 // Hook things up
 $wgHooks['BeforePageDisplay'][] = 'ResourcesJSJ';
 $wgHooks['SkinAfterContent'][] = 'GetFormF';
-$wgHooks['PageContentSaveComplete'][] = 'CheckSave';
+if ( class_exists( MediaWiki\HookContainer\HookContainer::class ) ) {
+	// MW 1.35+
+	$wgHooks['PageSaveComplete'][] = 'CheckSave';
+} else {
+	$wgHooks['PageContentSaveComplete'][] = 'CheckSave';
+}
 
 $wgResourceModules['ext.OfflineImportLexicon'] = array(
 	'scripts' => array(
