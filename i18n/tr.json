@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
-			"Hedda"
+			"Hedda",
+			"MuratTheTurkish"
 		]
 	},
 	"offlineimportlexicon": "Çevrimdışı içe aktarma sözlüğü",
@@ -56,10 +57,10 @@
 	"offlineimportlexicon-publisher": "Yayıncı",
 	"offlineimportlexicon-edition": "Baskı",
 	"offlineimportlexicon-language": "Dil",
-	"offlineimportlexicon-number-of-volumes": "Cilt sayısı",
+	"offlineimportlexicon-number-of-volumes": "Ses sayısı",
 	"offlineimportlexicon-create-lexicon": "Sözlük oluştur",
 	"offlineimportlexicon-cancel": "İptal",
-	"offlineimportlexicon-volume-number": "Cilt sayısı",
+	"offlineimportlexicon-volume-number": "Ses sayısı",
 	"offlineimportlexicon-physical-description": "Fiziksel tanımlama",
 	"offlineimportlexicon-create-volume": "Cilt oluştur",
 	"offlineimportlexicon-type": "Tür",
