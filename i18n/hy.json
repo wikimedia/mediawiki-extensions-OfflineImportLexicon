@@ -5,5 +5,7 @@
 		]
 	},
 	"offlineimportlexicon-publisher": "Հրատասրակիչ",
-	"offlineimportlexicon-author": "Հեղինակ(ներ)"
+	"offlineimportlexicon-cancel": "Չեղարկել",
+	"offlineimportlexicon-author": "Հեղինակ(ներ)",
+	"offlineimportlexicon-refresh": "Թարմացնել"
 }

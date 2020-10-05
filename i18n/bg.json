@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kareyac",
 			"StanProg"
 		]
 	},
-	"offlineimportlexicon-cancel": "Отказ"
+	"offlineimportlexicon-cancel": "Отказ",
+	"offlineimportlexicon-author": "Автор(и)"
 }
