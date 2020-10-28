@@ -4,5 +4,8 @@
 			"Joanmp17"
 		]
 	},
-	"offlineimportlexicon-editor": "መታዓራረይ"
+	"offlineimportlexicon-editor": "መታዓራረይ",
+	"offlineimportlexicon-language": "ቋንቋ",
+	"offlineimportlexicon-cancel": "ኣትርፍ",
+	"offlineimportlexicon-refresh": "ኣሐድስ"
 }
