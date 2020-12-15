@@ -37,7 +37,7 @@
 	"offlineimportlexicon-content-36": "Lütfen kitabın başından sayılan sayfa sayısını yazının sonuna ekleyin (zorunlu).",
 	"offlineimportlexicon-content-37": "Lütfen yazının başına yazılan numarayı maddenin başındaki gibi girin: 30 veya XI.",
 	"offlineimportlexicon-content-38": "Lütfen maddenin sonundaki kitabın sayfasına yazılan numarayı giriniz: 30 veya XI.",
-	"offlineimportlexicon-content-39": "Lütfen resimlerin adını giriniz. Önceden yüklenen resimler için lütfen kısa ad ve cilt içeren wiki-url'nin tam yolunu belirtin (1840-42-Münch-Volume-01-00000015.jpg). Resmin URL'si \"sözlüğün kısa adı\" gibi oluşturulmalıdır -Cilt-\"ciltsayısı\"-\"00000015.jpg (=kitaptaki sayılan fiziksel sayfalar)",
+	"offlineimportlexicon-content-39": "Lütfen resimlerin adını giriniz. Önceden yüklenen resimler için, lütfen kısa adı ve cildi içeren viki-url'nin tam yolunu sağlayın (1840-42-Münch-Volume-01-00000015.jpg). Resmin URL'si, \"sözlüğün kısa adı\"-Cilt-\"ciltnumarası\"-\"00000015.jpg (=kitapta sayılan fiziksel sayfalar) şeklinde oluşturulmalıdır",
 	"offlineimportlexicon-content-40": "Lütfen sözlüğün telif hakları hakkında özgür bir metin ekleyin.",
 	"offlineimportlexicon-new-lexicon": "Yeni sözlük",
 	"offlineimportlexicon-lexicon": "Sözlük",
