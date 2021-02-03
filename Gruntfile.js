@@ -11,7 +11,7 @@ module.exports = function ( grunt ) {
 			},
 			all: [
 				'**/*.{js,json}',
-				/* Ignore js files we carnt edit direct */
+				// Ignore js files we can't edit directly
 				'!scripts/jquery.ezpz_tooltip.js',
 				'!scripts/jquery.ezpz_tooltip.min.js',
 				'!node_modules/**',
