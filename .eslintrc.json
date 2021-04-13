@@ -32,6 +32,7 @@
 		"no-jquery/no-parse-html-literal": "warn",
 		"no-jquery/no-sizzle": "warn",
 		"no-implicit-globals": "warn",
-		"mediawiki/class-doc": "warn"
+		"mediawiki/class-doc": "warn",
+		"block-scoped-var": "warn"
 	}
 }

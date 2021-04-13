@@ -78,7 +78,7 @@ function post_save_function_images( save_res ) {
 }
 
 // Retrieve lexicons when application starts
-jQuery( document ).ready( function () {
+$( function () {
 	// init status bar
 	var status = 'Click on New Lexicon ...';
 	_statusbar = new StatusBar( null, { showCloseButton: true, additive: true, afterTimeoutText: status } );
@@ -996,10 +996,10 @@ function initLexicons( type ) {
 	}
 	//  alert(selectedProp.length+"prop");
 	for ( var i = 0; i < selectedProp.length; i++ ) {
-		var option_s = jQuery( '<option />' ),
+		var option_s = jQuery( '<option>' ),
 			prop = selectedProp[ i ].name,
 			val = selectedProp[ i ].val,
-			option_p = jQuery( '<option />' );
+			option_p = jQuery( '<option>' );
 		if ( i === 0 ) { option_p.attr( 'selected', true ); }
 		option_p.attr( 'title', val );
 		option_p.attr( 'value', prop ).html( prop ).appendTo( select_p );
