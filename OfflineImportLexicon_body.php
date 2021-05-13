@@ -68,7 +68,7 @@ class OfflineImportLexicon extends SpecialPage {
 		$selectcompare = $wgRequest->getVal( 'selectcompare' );
 		$selectoutput = $wgRequest->getVal( 'selectoutput' );
 
-		if ( !($user->isLoggedIn() ) ) {
+		if ( !($user->isRegistered() ) ) {
 			$wikitext = "User must be logged in.";
 			if ( method_exists( $wgOut, 'addWikiTextAsInterface' ) ) {
 				// MW 1.32+
